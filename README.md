@@ -4,9 +4,6 @@
 
 Hello Everyone My Name Is Lucas I´m a student tecnhology that love to do rice or called (linux customization ) this config was made in windows 11 , if you like you can show or copy this configs in this times , i´m study but sometime i´ll post my other configs , this is first github that i post my configs but i decide someday post my other configs ok see ya have a good one for everyone ... ass: LD
 
-
-===============================================================================================================================================================================
-
 Windows Rice + GlazeWm + Pywal
 
 # ... o resto das suas configurações gerais da barra (bars, layout, etc) vem aqui abaixo ...
