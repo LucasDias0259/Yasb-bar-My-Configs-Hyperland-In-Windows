@@ -1,0 +1,1048 @@
+@import "C:/Users/daned/.cache/wal/colors.css";
+/* Se o comando acima não funcionar, tente a linha abaixo descomentando-a: */
+/* @import url("file:///C:/Users/daned/.cache/wal/colors-css.css"); */
+
+:root { 
+    /* Conectando diretamente com o arquivo gerado pelo Wal */
+    --base: var(--background);       /* Fundo principal escuro da barra (#0e2020) */
+    --crust: var(--color0);
+    --mantle: var(--color0);
+    
+    /* CORRIGIDO: Agora os blocos internos dos widgets vão herdar o fundo escuro da barra, 
+       mas com uma leve transparência para dar profundidade, em vez de usar o cinza claro do --color8 */
+    --surface1: rgba(25, 45, 45, 0.4); 
+    --surface2: var(--color4);        /* Cor para elementos selecionados */
+    --surface3: var(--color3);        /* Barras de progresso */
+    
+    --text: var(--foreground);       /* Texto geral claro (#c2c7c7) */
+    --subtext1: var(--color7);
+    --subtext0: var(--color15);
+
+    /* Cores de destaque para os ícones brilharem com tons do seu wallpaper */
+    --mauve: var(--color4);      
+    --blue: var(--color3);       
+    --green: var(--color2);      
+    --red: var(--color1);        
+    --peach: var(--color5);
+    
+    --rosewater: var(--color14);  
+    --yellow: var(--color12);     
+    --teal: var(--color2);       
+    --lavender: var(--color13);
+    
+    --backgroundcol: var(--background);
+    --foregroundcol: var(--foreground);
+    --cursorcol: var(--text);
+}
+*{
+    font-size: 11px;
+    color: var(--text);
+    font-weight: 750;
+    font-family: "JetBrainsMono NFP";
+    margin: 0;
+    padding: 0;
+    border-radius: 12px;
+}
+/*GENERAL CONFIGRATIONS*/
+.yasb-bar {
+	background-color: var(--base);
+    padding: 0;
+}
+.widget {
+    padding: 0 3px;
+    margin: 0 1px;
+}
+.widget .icon {
+    font-size: 17px;
+}
+.widget .label {
+    color: var(--text);
+}
+
+
+/* -------------------------------------------------------------------------------------------------- */
+/* 3. Widgets                                                                                         */
+/* -------------------------------------------------------------------------------------------------- */
+
+/***-------------------------------      • Windows Desktops •      --------------------------------***/
+
+
+
+
+
+/*WEATHER WIDGET*/
+.weather-widget {
+    background-color: var(--surface1);
+    padding-right: 10px;
+}
+.weather-widget .icon {
+    color: var(--yellow);
+    padding: 6px;
+}
+.weather-widget .label {
+    font-size: 14px;
+    ;
+}
+/*ACTIVE WINDOW WIDGET*/
+.active-window-widget {
+    background-color: var(--surface1);
+    margin-left: 4px;
+    padding-right: 0px;
+    padding-left: 10px;
+}
+.active-window-widget .label {
+    font-size: 14px;
+}
+.active-window-widget .icon {
+    padding-right: 5px;
+    border: none;
+}
+/*CLOCK - CALENDAR WIDGET*/
+.clock-widget {
+    background-color: var(--surface1);
+    background-color: var(--red);
+    padding-left: 10px;
+    padding-right: 10px;
+	margin-right: 2px;
+}
+
+.clock-widget .label {
+    font-size: 14px;;
+    
+}
+/*CLOCK - CALENDAR WIDGET DROPDOWN*/
+/*CLOCK - CALENDAR WIDGET DROPDOWN*/
+.calendar {
+	background-color: var();
+    
+    
+}
+.calendar .calendar-table,
+.calendar .calendar-table::item {
+	background-color: var(--surface1);
+	color: var(--text);
+    margin-top: 0px;
+	font-size: 21px;
+	padding: 0;
+}
+
+.calendar .calendar-table::item:selected {
+	color: var(--rosewater);
+    background: var(--surface2);
+	border-radius: 11px;
+}
+.calendar .day-label {
+	margin-top: 0px;
+    
+}
+.calendar .day-label{
+    color: var(--text);
+    font-size: 20px;
+    background-color: var(--surface1);
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.calendar .month-label{
+    color: var(--text);
+    font-size: 20px;
+    background-color: var(--surface1);
+    margin-bottom: 0px;
+    border-radius: 10px;
+
+}
+.calendar .date-label {
+	font-size: 20px;
+    background-color: var(--surface1);
+    border-radius: 10px;
+	color: var(--rosewater);
+	font-weight: 700;
+	min-width: 150px;
+	max-width: 0px;
+}
+.calendar .month-label {
+	font-weight: normal;
+	padding-bottom: 0px;
+}
+.calendar .date-label {
+	font-size: 80px;
+	font-weight: 900;
+	color: var(--teal);
+    background-color: var(--surface1);
+	margin-top: 12px;
+    border-radius: 40px;
+    margin-left: -15;
+    margin-right: -15;
+}
+
+
+/*DISK WIDGET*/
+.disk-widget {
+    padding-right: 6px;
+    padding-left: 6px;
+    border-radius: 20px;
+    background-color: var(--background);
+}
+/*DISK DROPDOWN*/
+.disk-group {
+    background-color: var(--crust);
+    
+
+}
+.disk-group-row {
+    min-width: 200px;
+    max-width: 200px;
+    max-height: 40px;
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+    border: 110px solid rgba(128, 128, 128, 0);
+}
+.disk-group-row:hover {
+    background-color: var(--surface1);
+    border: 2px solid var(--red);
+}
+.disk-group-label-bar{
+    max-height: 8px;
+    border: 1px solid var(--surface1);
+    background-color: var(--surface3);
+    border-radius: 4px;
+}
+.disk-group-label-bar::chunk{
+    background-color: var(--teal);
+    border-radius: 4px;
+}
+.disk-group-label {
+    font-size: 12px;
+    color: var(--rosewater);
+}
+.disk-group-label-size {
+    font-size: 12px;
+    color: var(--rosewater);
+}
+/*AUDIO WIDGET*/
+.volume-widget {
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: var(--surface1);
+    border-radius: 11px;
+}
+.volume-widget .icon {
+    padding: 0 6px;
+    color: var(--red);
+    
+}
+.volume-widget .label {
+    font-size: 15px;
+}
+/*AUDIO DROPDOWN*/
+.audio-menu {
+    background-color: var(--base);
+    
+}
+.audio-container .device {
+    font-size: 20px;
+    color: var(--text);
+    background-color: var(--surface1);
+    border: none;
+    padding: 8px 8px 8px 8px;
+    margin: 4px 0;
+    font-size: 14px;
+    border-radius: 12px;
+}
+.audio-container .device.selected {
+    background-color: var(--surface1);
+    color: var(--teal);
+}
+.audio-container .device:hover {
+    background-color: var(--base);
+    color: var(--rosewater);
+}
+
+
+/*WALLPAPERS WIDGET*/
+.wallpapers-widget {
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 1px;
+    background-color: var(--surface1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+/*WALLPAPERS GALLERY*/
+.wallpapers-gallery-window {
+    background-color: var(--crust);
+    border: 6;
+    margin: 1;
+}
+.wallpapers-gallery-buttons {
+    font-size: 12px;
+    font-family: "JetBrainsMono NFP";
+    background-color:rgba(255, 255, 255, 0);
+    color: var(--subtext1);
+    border: none;
+    font-size: 14px;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin:0 8px 8px 8px;
+    width: 600px;
+}
+.wallpapers-gallery-buttons:hover {
+    background-color: var(--overlay2);
+}
+.wallpapers-gallery-image {
+    border: 6px solid var(--surface1);
+    border-radius: 6px;
+}
+.wallpapers-gallery-image:hover {
+    border: 6px solid var(--base);
+    
+}
+.wallpapers-gallery-image.focused {
+    border: 6px solid var(--red);
+}
+
+
+.battery-widget .widget-container .label.status-low {
+	color: var(--red);
+	background: var(--surface1);
+	margin: 2px 0px 2px 0px;
+    font-size: 11px;
+	padding: 0 10px 0 10px;
+	border-radius: 8px;
+}
+.battery-widget .widget-container .label.status-medium {
+	color: var(--rosewater);
+	background: var(--surface1);
+	margin: 2px 0px 2px 0px;
+    font-size: 11px;
+	padding: 0 10px 0 10px;
+	border-radius: 8px;
+}
+.battery-widget .widget-container .label.status-high {
+	color: var(--teal);
+	background: var(--surface1);
+	margin: 2px 0px 2px 0px;
+    font-size: 11px;
+	padding: 0 10px 0 10px;
+	border-radius: 8px;
+}
+.battery-widget .widget-container .label.status-full {
+	color: var(--text);
+	background: var(--surface1);
+	margin: 2px 0px 2px 0px;
+    font-size: 11px;
+	padding: 0 10px 0 10px;
+	border-radius: 8px;
+}
+.battery-widget .widget-container .label.status-charging {
+	color: var(--subtext1);
+	background: var(--surface1);
+    font-size: 11px;
+	margin: 2px 0px 2px 0px;
+	padding: 0 10px 0 10px;
+	border-radius: 8px;
+}
+
+.battery-widget .widget-container .icon.status-low {
+	color: var(--red);
+}
+.battery-widget .widget-container .icon.status-medium {
+	color: var(--rosewater);
+}
+.battery-widget .widget-container .icon.status-high {
+	color: var(--teal);
+	padding-right: 4px;
+}
+.battery-widget .widget-container .icon.status-full {
+	color: var(--green);
+	padding-right: 4px;
+}
+.battery-widget .widget-container .icon.status-charging {
+	color: var(--text);
+}
+
+
+.update-check-widget {
+    padding: 0 0px 0 0px;
+    
+    
+}
+.update-check-widget .icon {
+    font-size: 16px;
+}
+.update-check-widget .widget-container.winget,
+
+
+.update-check-widget .widget-container.windows {
+    background: var(--mauve);
+    margin: 0px 0px 0px 0px;
+    border-radius: 10px;
+    border: 0px solid var(--rosewater);
+    
+}
+.update-check-widget .widget-container.winget .icon,
+.update-check-widget .widget-container.windows .icon {
+    color: var(--base);
+    margin: 0 2px 0 6px;
+    
+    
+}
+.update-check-widget .widget-container.winget .label,
+.update-check-widget .widget-container.windows .label {
+    margin: 0 6px 0 1px;
+    color: var(--base);
+    font-weight: 900;
+    font-size: 14px;
+    
+}
+
+
+
+.update-check-widget {
+    padding: 0 0px 0 0px;
+}
+
+.update-check-widget .icon {
+    font-size: 14px;
+}
+
+.update-check-widget .widget-container.winget,
+.update-check-widget .widget-container.windows {
+    background: var(--rosewater);
+    margin: 0px 0px 0px 0px;
+    border-radius: 8px;
+    border: 2px solid var(--base);
+}
+
+.update-check-widget .widget-container.windows {
+    background: var(--mauve);
+    margin: 0px 0px 0px 0px;
+    border-radius: 8px;
+    border: 2px solid var(--red);
+}
+
+.update-check-widget .widget-container.winget .icon,
+.update-check-widget .widget-container.windows .icon {
+    color: var(--red);
+    margin: 0 1px 0 6px;
+}
+
+.update-check-widget .widget-container.winget .label,
+.update-check-widget .widget-container.windows .label {
+    margin: 0 6px 0px 0px;
+    color: var(--red);
+    font-weight: 900;
+    font-size: 14px;
+}
+
+/* SYSTEMINFO GROUPER */
+.grouped-widgets .container {
+    background-color: var(--red);
+    padding-right: 4px;
+    margin: 0px 0px 0px 0px;
+    border-radius: 20px;
+
+}
+/* CPU & MEMORY */
+.cpu-widget .icon {
+    color: var(--text);
+    background-color: var(--background);
+    padding-left: 6px;
+    padding-right: 6px;
+}
+    .memory-widget .icon{
+    color: var(--text);
+    background-color: var(--background);
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+.memory-widget .label,
+.cpu-widget .label {
+    background-color: var(--background);
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+.microphone-widget .icon.muted {
+    color: var(--red);
+    margin: 0px 0px 0px 0px;
+}
+
+.microphone-widget .icon {
+    color: var(--rosewater);
+    background-color: var(--surface1);
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    min-width: 30px;
+    border-radius: 8px;
+
+}
+.microphone-menu {
+    background-color: var(--base);
+    min-width: 300px;
+}
+/* System microphone volume */
+.microphone-menu .system-volume-container .volume-slider {
+    border: none;
+}
+/* Device list styles */
+.microphone-menu .microphone-container .device {
+    background-color: transparent;
+    border: none;
+    padding: 6px 8px 6px 4px;
+    margin: 2px 0;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.microphone-menu .microphone-container .device.selected {
+    background-color: rgba(255, 255, 255, 0.085);
+}
+.microphone-menu .microphone-container .device:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+
+
+/* ----------------------------------------------------------------------------
+    Windows Desktops (Virtual Desktops)
+   ---------------------------------------------------------------------------- */
+.windows-desktops, .apps-widget, .komorebi-active-layout {
+    background-color: var(--surface1);
+    color: var(--lavender);
+
+}
+
+.windows-desktops {
+    border-top-left-radius: 11px;
+    border-bottom-left-radius: 11px;
+    margin-left: 0px;
+
+}
+.windows-desktops {
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    padding: 0 6px 0 6px;
+    
+}
+
+.windows-desktops .offline-status {
+    color: var(--surface2);
+    font-size: 12px;
+    padding: 0 0 0 4px;
+    font-weight: 600;
+}
+
+.windows-desktops .ws-btn {
+	border: none;
+    background-color: transparent;
+    margin: 0;
+    font-size: 12px;
+    color: var(--red);
+    height: 30px;
+    width: 20px;
+    font-size: 15px;
+}
+
+.windows-desktops.ws-btn:hover {
+    color: var();
+
+}
+
+.windows-desktops .ws-btn.active {
+	color: var(--text);
+    background-color: var(--surface2);
+    width: 30px;
+    max-width: 36px;
+    height: 18px;
+    margin: 0 1px;
+    border-radius: 9px;
+    font-size: 17px;
+}
+
+
+.windows-desktops .ws-btn.populated{
+    width: 20px;
+    height: 20px;
+    background-color: #89dceb;
+    border-radius: 0px;
+    margin: 0 0px;
+    font-size: 16px;
+
+}
+.windows-desktops .context-menu {
+	background-color: var(--color-background-elevated);
+	border: 1px solid var(--color-stroke-surface);
+	border-radius: var(--radius-medium);
+	padding: var(--space-4);
+}
+
+.windows-desktops .context-menu .menu-item {
+	padding: var(--space-8) var(--space-16);
+	border-radius: var(--radius-small);
+	color: var(--color-text-secondary);
+}
+
+.windows-desktops .context-menu .menu-item:hover {
+	background-color: var(--color-subtle-fill-hover);
+	color: var(--red);
+}
+
+.windows-desktops .context-menu .separator {
+	height: 1px;
+	background-color: var(--color-stroke-divider);
+	margin: var(--space-4) 0;
+}
+
+/* Qt-specific Dialog Styles */
+.windows-desktops .rename-dialog {
+	border: 1px solid var(--color-stroke-surface);
+	border-radius: var(--radius-large);
+}
+
+.windows-desktops .rename-dialog QPushButton {
+	background-color: var(--color-accent-default);
+	color: var(--color-background-base);
+	border: none;
+	padding: var(--space-8) var(--space-16);
+	border-radius: var(--radius-small);
+	font-weight: var(--font-weight-semibold);
+}
+
+.windows-desktops .rename-dialog QPushButton:hover {
+	background-color: var(--color-accent-secondary);
+}
+
+.windows-desktops .rename-dialog QLabel {
+	color: var(--color-text-primary);
+	font-size: var(--font-size-body);
+}
+
+.windows-desktops .rename-dialog QLineEdit {
+	background-color: var(--color-surface-secondary);
+	border: 1px solid var(--color-stroke-control-default);
+	border-radius: var(--radius-small);
+	padding: var(--space-8);
+	color: var(--color-text-primary);
+	font-family: var(--font-text);
+}
+
+.windows-desktops .rename-dialog QLineEdit:focus {
+	border-color: var(--color-accent-default);
+	outline: none;
+}
+
+
+
+
+
+/* ----------------------------------------------------------------------------
+    Taskbar Widget
+   ---------------------------------------------------------------------------- */
+.taskbar-widget .app-container {
+	padding: 0 var(--space-4);
+	margin: 0 var(--space-2);
+    margin-left: 8px;
+}
+
+.taskbar-widget .app-container:hover {
+	background-color: var();
+    border-radius: 0px;
+	border-bottom: 2px solid var(--surface2);
+    margin-left: 6;
+    margin-right: 0;
+    padding-right: 4px;
+    padding-bottom: 0px;
+    padding-left: 4px;
+
+}
+
+.taskbar-widget .app-container.foreground {
+	background-color: var();
+    border-radius: 0px;
+	border-bottom: 2px solid var(--rosewater);
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 0px;
+    margin-left: 8;
+    margin-right: 0;
+}
+
+.taskbar-widget .app-container .app-title {
+	padding-left: var(--space-4);
+	color: var(--color-text-secondary);
+	font-size: var(--font-size-body);
+}
+
+.taskbar-widget .app-container.foreground .app-title {
+	color: var(--color-text-primary);
+	font-weight: var(--font-weight-semibold);
+}
+
+.taskbar-preview {
+	background-color: var(--base);
+	border-radius: 12px;
+	padding: var(--space-2);
+}
+
+.taskbar-preview .header {
+	padding-bottom: 10px;
+	padding-top: var(--margin-normal);
+}
+
+.taskbar-preview .header .title {
+	color: var(--rosewater);
+	font-weight: var(--font-bold);
+	font-size: 13px;
+}
+
+/* Showkeyboard */
+.showkeyboard-widget {
+    padding: 0px 0px 0px 0px;
+    border-radius: 10;
+    
+}
+.showkeyboard-widget .widget-container {
+    
+    padding: 0px 8px 0px 8px;
+    border-radius: 11px;
+    background-color: var(--surface1);
+}
+.showkeyboard-widget .widget-container:hover { 
+    background-color: var(--red);
+}
+
+/* --- bluetooth --- */
+.bluetooth-widget {
+    background-color: var(--background);
+    border-radius: 11px;
+}
+.bluetooth-widget .label {
+    color: var(--text);
+    padding-right: 8px;
+    padding-left: 1px;
+
+}
+.bluetooth-widget .icon {
+    color: var(--text);
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    min-width: 24px;
+    border-radius: 8px;
+}
+
+
+/*  --- WIFI  ---  */
+.wifi-widget .icon{
+    color: var(--text);
+    margin: 0px 0px 0px 0px;
+    background-color: var(--background);
+    padding: 0px 4px 0px 4px;
+    min-width: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 13px;
+    border-bottom-left-radius: 13px;
+
+
+}
+
+.wifi-menu {
+    font-family: 'Segoe UI';
+    background-color: rgba(17, 17, 27, 0.4);
+    max-height: 350px;
+    min-height: 375px;
+    min-width: 420px;
+    
+}
+
+.wifi-menu .progress-bar {
+    max-height: 12px;
+    color: var(--teal);
+}
+
+.wifi-menu .header {
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    padding: 12px;
+    background-color: var(--surface1);
+    color: var(--rosewater);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    
+}
+
+.wifi-menu .error-message {
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    padding: 12px;
+    background-color: var(--red);
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wifi-menu .wifi-list {
+    background-color: var(--base);
+    margin-right: 6px;
+}
+
+.wifi-menu .wifi-item {
+    min-height: 35px;
+    padding: 2px 12px;
+    margin: 2px 4px;
+    background-color: var(--surface1);
+    border-radius: 8px;
+}
+
+.wifi-menu .wifi-item:hover {
+    background-color: var(--surface3);
+    border-radius: 6px;
+    
+}
+
+.wifi-menu .wifi-item[active=true] {
+    background-color: var(--surface3);
+    font-size: 14px;
+    border-radius: 8px;
+    min-height: 80px;
+}
+
+.wifi-menu .wifi-item .icon {
+    font-family: 'Segoe Fluent Icons';
+    font-size: 26px;
+    margin-right: 10px;
+    background-color: var(--base);
+    border-radius: 8px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.wifi-menu .wifi-item .name {
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    margin-right: 10px;
+    background-color: var(--base);
+    border-radius: 8px;
+    padding-left: 8px;
+    padding-right: 4px;
+}
+
+.wifi-menu .wifi-item .password {
+    font-family: 'Segoe UI';
+    background-color: var(--base);
+    font-size: 14px;
+    
+}
+
+.wifi-menu .wifi-item .status {
+    font-family: 'Segoe UI';
+    font-size: 14px;
+    background-color: var(--base);
+    border-radius: 9px;
+    padding-left: 6px;
+    padding-right: 6px;
+
+}
+
+.wifi-menu .wifi-item .strength {
+    font-family: 'Segoe UI';
+    font-size: 14px;
+}
+
+.wifi-menu .wifi-item .controls-container {
+    padding-top: 8px;
+    background-color: var();
+}
+
+.wifi-menu .wifi-item .connect {
+    background-color: var(--base);
+    padding: 4px 30px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+}
+
+.wifi-menu .wifi-item .connect:hover {
+    background-color: var(--surface1);
+}
+
+.wifi-menu .wifi-item .connect:pressed {
+    background-color: var(--base);
+}
+
+.wifi-menu .footer {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px;
+    margin-top: 2px;
+    color: #9399b2;
+    background-color: var(--surface1);
+    border-top: 2px solid var(--teal);
+}
+
+.wifi-menu .footer .settings-button {
+    font-family: 'Segoe UI';
+    background-color: var(--base);
+    border-radius: 9px;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 120px;
+    min-height: 24px;
+    color: var(--rosewater);
+}
+
+.wifi-menu .footer .refresh-icon {
+    font-family: 'Segoe Fluent Icons';
+    background-color: var(--base);
+    border-radius: 8px;
+    min-width: 26px;
+    min-height: 26px;
+    color: var(--teal);
+}
+
+.wifi-menu .footer .refresh-icon:hover {
+    background-color: var(--surface2);
+    border-radius: 8px;
+}
+
+
+/* Systray */
+
+.systray {
+    background: var(--surface1);
+    border-radius: 11px;
+}
+.systray .unpinned-container {
+    background: var(--surface1);
+}
+.systray .pinned-container {
+    background: transparent;
+}
+.systray .button {
+    border-radius: 8px;
+    padding: 1px;
+    background-color: var(--surface2);
+}
+
+.systray .button:hover {
+    background: var(--red);
+    border-radius: 8px;
+}
+/* Icon being dragged, we already apply some transparency to it so you don't need to use it */
+.systray .button.dragging {
+   background-color: #4cc2ff; 
+}
+
+.systray .button.drag-over {
+     background: rgba(255, 255, 255, 0.4);
+}
+
+.systray .pinned-container.drop-target {
+    background: rgba(255, 255, 255, 0.1);
+}
+.systray .unpinned-visibility-btn {
+    border-radius: 4px;
+    height: 20px;
+    width: 16px;
+    border: none;
+    outline: none;
+}
+
+.systray .unpinned-visibility-btn:checked {
+    background: var(--crust);
+    border-radius: 8px;
+}
+
+.systray .unpinned-visibility-btn:hover {
+    background: var(--red);
+    border-radius: 8px;
+}
+
+/* Popup styles (when show_in_popup is true) */
+ 
+/* The icon the drag is hovering over (drop target icon) */
+.systray-popup .button.drag-over {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+/* Icon being dragged, we already apply some transparency to it so you don't need to use it */
+.systray-popup .button.dragging {
+    background-color: #4cc2ff;
+}
+
+.systray .pinned-container.pinned-container.drop-target {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.systray-popup {
+    background-color: rgba(48, 48, 48, 0.6);
+    padding: 4px;
+}
+.systray-popup .button {
+    padding: 10px;
+    margin: 0;
+    border: 0;
+    border-radius: 6px;
+}
+.systray-popup .button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* test grouper */
+
+.grouper-test .container{
+    background-color: var(--surface1);
+    padding-left: 0px;
+    padding-right: 0px;
+    padding: 0px 0px 0px 0px;
+    
+}
+
+.grouper-test .grouper-button {
+    font-size: 17px;
+    color: var(--rosewater);
+    
+    padding: 0px 6px;
+    margin-left: 0;
+    margin-right: 0px;
+    background-color: transparent;
+    border: none;
+}
+
+.grouper-test .grouper-button:hover {
+    color: var(--red);
+    
+}
+
+.grouper-test .container {
+    background-color: var(--surface1);
+    margin: 0px 0px 0px 0px;
+    border-radius: 12px;
+    margin-left: 0px;
+}
+
+.glazewm-tiling-direction {
+    padding: 0;
+    margin: 0;
+}
+
+/* glaze tiling */
+.glazewm-tiling-direction .btn {
+    font-size: 18px;
+    background-color: var(--surface1);
+    border-radius: 9px;
+    width: 14px;
+    padding: 0 4px 0 4px;
+    color: var(--rosewater);
+}
+
+.glazewm-tiling-direction .btn:hover {
+    background-color: var(--red);
+    color: var(--text);
+}
+
