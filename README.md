@@ -6,5 +6,5 @@ Hello Everyone My Name Is Lucas I´m a student tecnhology that love to do rice o
 
 (Terminal From Windows + StartShip + Transparent)
 
-<img width="1920" height="1080" alt="image" src= "<img width="1920" height="1080" alt="Capturadetela2026-05-31005705-ezgif com-png-to-jpg-converter" src="https://github.com/user-attachments/assets/b5a9eccd-932b-4970-aa7b-71208f65e2c7" />"/>
+<img width="1920" height="1080" alt="image" src="Capturadetela2026-05-31005705-ezgif com-png-to-jpg-converter" src="https://github.com/user-attachments/assets/b5a9eccd-932b-4970-aa7b-71208f65e2c7" />
 
