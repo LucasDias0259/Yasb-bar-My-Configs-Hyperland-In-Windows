@@ -1,6 +1,9 @@
 @import "C:/Users/daned/.cache/wal/colors.css";
 /* Se o comando acima não funcionar, tente a linha abaixo descomentando-a: */
 /* @import url("file:///C:/Users/daned/.cache/wal/colors-css.css"); */
+/* daned e o meu usuario  troquem pelos de voces ex: fulano/_____/______ */
+
+/* as configs de cor são do pywal se não funcionar troque as cores ainda não sei como botar pra mostrar as configs do pywal por enquanto.../*
 
 :root { 
     /* Conectando diretamente com o arquivo gerado pelo Wal */
